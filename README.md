@@ -6,9 +6,9 @@ We introduce IT-PI, an information-theoretic, data-driven framework inspired by 
 Grounded in the information-theoretic bounds to the irreducible model error, IT-PI maximizes predictability of the output regardless of the chosen modeling approach. 
 The method involves the maximization of the mutual information between inputs and output, which is efficiently solved using the covariance matrix adaptation evolution strategy algorithm. 
 ## Features 
-- ** IT-PI applies to algebraic, ODE, and PDE relationships.
-- ** IT-PI identifies optimal dimensionless inputs.
-- ** IT-PI distinguishes physical regimes.
-- ** IT-PI discovers self-similar variables.
-- ** IT-PI extracts characteristic scales.
-- ** IT-PI provides optimal model bounds based on discovered dimensionless variables.
+- IT-PI applies to algebraic, ODE, and PDE relationships.
+- IT-PI identifies optimal dimensionless inputs.
+- IT-PI distinguishes physical regimes.
+- IT-PI discovers self-similar variables.
+- IT-PI extracts characteristic scales.
+- IT-PI provides optimal model bounds based on discovered dimensionless variables.
