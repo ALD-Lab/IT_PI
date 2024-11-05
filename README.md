@@ -14,7 +14,7 @@ The method involves the maximization of the mutual information between inputs an
 - IT-PI provides optimal model bounds based on discovered dimensionless variables.
 ## Getting started
 Use the following command to install all required libraries:
-'''sh
+```sh
 pip install numpy scipy matplotlib pandas cma
-'''
+```
 See the Jupyter notebooks for examples in the paper.
