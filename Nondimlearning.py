@@ -95,9 +95,7 @@ def dimensional_analysis(X, Y, D_in, variable_names, num_input,
         # Use provided initial conditions
         if len(initial_conditions) != num_params:
             warnings.warn(f"Expected {num_params} initial conditions but got {len(initial_conditions)}. Using default.")
-            initial_solution = [0] * num_params
-            for i in range(num_input):
-                initial_solution[i * num_basis] = 1
+            initial_solution = [0.1] * num_params
         else:
             initial_solution = initial_conditions
     print(f"Using initial conditions: {initial_solution}")

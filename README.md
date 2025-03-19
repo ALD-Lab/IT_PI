@@ -105,3 +105,10 @@ The tool generates:
 - PyYAML
 - pandas
 - CMA-ES
+
+### Create and activate compatible environments using anaconda and pip
+```bash
+conda create -n "IT_PI"
+pip install -r requirements.txt
+conda activate IT_PI
+```
