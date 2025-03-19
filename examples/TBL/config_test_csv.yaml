@@ -1,0 +1,96 @@
+# Dimensional Analysis Configuration
+
+data:
+  # List of data files to analyze
+  file_paths:
+    - "./data/csv/TBL_5_data.csv"
+    - "./data/csv/TBL_10_data.csv"
+  
+  # Key for extracting data from the pickle files
+  data_key: "unnormalized_inputs"
+  
+  # Column indices in the data files
+  # Need this to calculate inputs and outputs automatically
+  column_indices:
+    y: 0      # Wall distance
+    U_1: 1    # Streamwise velocity
+    nu: 2     # Kinematic viscosity
+    utau: 3   # Friction velocity
+    up: 4     # Viscous velocity scale
+    U_2: 5    # Wall-normal velocity
+    U_3: 6    # Spanwise velocity
+    U_4: 7    # Temperature
+  
+  # Optional: Limit sample size (use all data if not specified)
+  sample_size: 100
+  
+  # Optional: Use random sampling instead of first N samples
+  random_sampling: true
+
+analysis:
+  # Formula to calculate the output variable (Y)
+  output_calculation: "utau * y / nu"
+  
+  # Columns to use as input variables (X)
+  input_columns: [0, 1, 2, 4, 5, 6]
+  
+  # Names of the input variables (for labeling)
+  variable_names: ["y", "U_1", "\\nu", "u_p", "U_2", "U_3"]
+  
+  # Dimension matrix describing physical dimensions of variables
+  # Format: rows = fundamental dimensions (e.g., length, time)
+  #         columns = variables
+  dimension_matrix: 
+    - [1, 1, 2, 1, 1, 1]  # Length dimension
+    - [0, -1, -1, -1, -1, -1] # Time dimension
+  
+  # Optional: Custom basis matrices (calculated if not provided)
+  basis_matrices: 
+    - [1, 1, -1, 0, 0, 0]   # U_1 * y / nu
+    - [1, 0, -1, 1, 0, 0]   # U_p * y / nu
+    - [1, 0, -1, 0, 1, 0]   # U_2 * y / nu
+    - [1, 0, -1, 0, 0, 1]   # U_3 * y / nu
+  
+  # Number of dimensionless groups to find
+  num_dimensionless_groups: 3
+
+optimization:
+  # Number of bins for mutual information calculation
+  binning_bins: 30
+  
+  # K value for nearest-neighbor algorithm (NOT IMPLEMENTED YET)
+  k_nn: 5
+  
+  # Number of parallel processes to use (Do not set to many processes...)
+  n_procs: 4
+  
+  # Initial conditions for CMA-ES optimizer
+  # Format: flat array of coefficients, length = num_basis * num_dimensionless_groups
+  # e.g. For 2 groups with 4 basis matrices: need 8 values
+  initial_conditions: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+  
+  # CMA-ES optimizer options
+  cma_options:
+    # Bounds for parameter search [lower_bounds, upper_bounds]
+    # (num_basis * num_dimensionless_groups) * 2 
+    bounds: [[0, 0, 0, 0, 0, 0, 0, 0], [2, 2, 2, 2, 2, 2, 2, 2]]
+    
+    # Maximum number of iterations
+    maxiter: 50000
+    
+    # Convergence tolerances
+    tolx: 1e-4
+    tolfun: 1e-4
+    
+    # Population size for CMA-ES
+    popsize: 300
+
+output:
+  # Whether to save results
+  save_results: true
+  
+  # Directory to save results
+  results_dir: "./examples/TBL/results/"
+  
+  # Whether to generate plots
+  plot_results: true
