@@ -1,0 +1,33 @@
+# Results directories
+results/
+results_*/
+**/results/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+*~
