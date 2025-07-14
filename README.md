@@ -1,10 +1,15 @@
 # IT_PI: Information-theoretic Buckingham-Π theorem
-_The code implements IT-PI, an information-theoretic, data-driven framework inspired by Buckingham PI theorem to identify the most predictive dimensionless inputs for non-dimensional quantities._
+_The code implements IT-PI, an information-theoretic, data-driven method to identify the most predictive dimensionless inputs for non-dimensional quantities._
 ## Introduction
 Dimensional analysis is one of the most fundamental tools for
 understanding physical systems. However, the construction of
 dimensionless variables, as guided by the Buckingham-$\pi$ theorem, is
 not uniquely determined. 
+Here, we introduce IT-$\pi$, a model-free
+method that combines dimensionless learning with the principles of
+information theory. Grounded in the irreducible error theorem,
+IT-$\pi$ identifies dimensionless variables with the highest
+predictive power by measuring their shared information content.
 ## Features 
 - IT-PI identifies optimal dimensionless variables.
 - IT-PI estimates optimal error bounds and its uncertainty based on discovered dimensionless variables.
