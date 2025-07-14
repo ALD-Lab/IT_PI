@@ -83,4 +83,22 @@ print("Irreducible error:", results["irreducible_error"])
 print("Uncertainty:", results["uncertainty"])
 ```
 
-See the Jupyter notebooks in `Examples` directory for results presented in the paper.
+See the Jupyter notebooks in `Examples` directory for results presented in the paper. This includes:
+
+Five validation cases:
+• Rayleigh — Rayleigh problem
+• Colebrook — Colebrook equation
+• Malkus — Malkus waterwheel
+• Benard — Rayleight-B´enard convection
+• Blasius — Blasius boundary layer
+
+
+Three application cases:
+• Velocity_transformation - Velocity scaling for compressible wall-bounded turbulence
+• Wall_model - Wall fluxes in compressible turbulence over rough walls
+• Dixit - Wall friction in turbulent flow over smooth surfaces under different mean pressure gradients
+• Keyhole - Formation of a keyhole in a puddle of liquid metal melted by the laser
+• MHD - Magnetohydrodynamics power generator
+
+
+
