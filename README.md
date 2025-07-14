@@ -87,20 +87,20 @@ See the Jupyter notebooks in `Examples` directory for results presented in the p
 
 **Five validation cases:**
 
-• **Rayleigh** — Rayleigh problem  
-• **Colebrook** — Colebrook equation  
-• **Malkus** — Malkus waterwheel  
-• **Benard** — Rayleigh–Bénard convection  
-• **Blasius** — Blasius boundary layer  
+- **Rayleigh**: Rayleigh problem  
+- **Colebrook**: Colebrook equation  
+- **Malkus**: Malkus waterwheel  
+- **Benard**: Rayleigh–Bénard convection  
+- **Blasius**: Blasius boundary layer  
 
 
 **Five application cases:**
 
-• **Velocity_transformation** — Velocity scaling for compressible wall-bounded turbulence  
-• **Wall_model** — Wall fluxes in compressible turbulence over rough walls  
-• **Dixit** — Wall friction in turbulent flow over smooth surfaces under different mean pressure gradients  
-• **Keyhole** — Formation of a keyhole in a puddle of liquid metal melted by a laser  
-• **MHD** — Magnetohydrodynamics power generator 
+- **Velocity_transformation**: Velocity scaling for compressible wall-bounded turbulence  
+- **Wall_model**: Wall fluxes in compressible turbulence over rough walls  
+- **Dixit**: Wall friction in turbulent flow over smooth surfaces under different mean pressure gradients  
+- **Keyhole**: Formation of a keyhole in a puddle of liquid metal melted by a laser  
+- **MHD**: Magnetohydrodynamics power generator 
 
 
 
