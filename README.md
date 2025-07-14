@@ -82,7 +82,7 @@ print("\nOptimal dimensionless variable(s):", results["labels"])
 print("Irreducible error:", results["irreducible_error"])
 print("Uncertainty:", results["uncertainty"])
 ```
-
+## Example Notebooks
 See the Jupyter notebooks in `Examples` directory for results presented in the paper. This includes:
 
 **Five validation cases:**
