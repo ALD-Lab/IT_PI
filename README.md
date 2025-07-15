@@ -1,5 +1,5 @@
 # IT_PI: Information-theoretic Buckingham-Π theorem
-_The code implements IT-PI, an information-theoretic, data-driven method to identify the most predictive dimensionless inputs for non-dimensional quantities._
+_The code implements IT-PI, an information-theoretic, data-driven method to identify the most predictive dimensionless inputs for quantities of interests._
 ## Introduction
 Dimensional analysis is one of the most fundamental tools for
 understanding physical systems. However, the construction of
